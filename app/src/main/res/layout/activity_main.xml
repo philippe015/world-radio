@@ -128,6 +128,7 @@
                 android:textSize="11sp"
                 android:textColor="#00B8D4"
                 android:paddingTop="4dp"
+                android:paddingBottom="4dp"
                 android:text="Chargement…" />
         </LinearLayout>
 
@@ -137,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="6dp"
             android:background="#000000"
             android:divider="#00596B"
             android:dividerHeight="1dp"
@@ -172,7 +173,7 @@
                 android:shadowColor="#9900E5FF"
                 android:shadowRadius="8"
                 android:textSize="13sp"
-                android:maxLines="2"
+                android:singleLine="true"
                 android:ellipsize="end"
                 android:text="Aucune station" />
 
@@ -181,7 +182,7 @@
                 android:layout_width="64dp"
                 android:layout_height="52dp"
                                 android:src="@drawable/ic_play"
-                android:tint="#0A2E0F"
+                android:tint="#00E5FF"
                 android:padding="14dp"
                 android:contentDescription="@string/app_name" />
 
