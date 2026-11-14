@@ -90,13 +90,17 @@ app/src/main/java/fr/cyberpunk/worldradio/
 └── GlowImageButton.java    # bouton icône néon
 ```
 
-## 📸 Aperçu du thème
+## 📸 Captures d'écran
 
-> Illustrations du design (rendu cible), pas des captures d'écran.
+### Playlist (écran principal)
 
-| Playlist | Lecteur |
-|---|---|
-| ![Playlist](docs/apercu-playlist.png) | ![Lecteur](docs/apercu-lecteur.png) |
+![Playlist](docs/capture-playlist.jpg)
+
+### Lecteur plein écran
+
+> Illustration du design du lecteur (la capture réelle sera ajoutée prochainement).
+
+![Lecteur](docs/apercu-lecteur.png)
 
 ## ⚠️ Limites connues
 
