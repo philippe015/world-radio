@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">World Radio</string>
+    <string name="hint_search">Rechercher une radio, un pays, une ville…</string>
+    <string name="search">Chercher</string>
+    <string name="stop">Stop</string>
+    <string name="eq_title">Égaliseur 8 bandes</string>
+    <string name="loading">Chargement des radios…</string>
+    <string name="none">Aucune station trouvée</string>
+</resources>

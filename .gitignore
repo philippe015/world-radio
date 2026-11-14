@@ -1,0 +1,13 @@
+# Android / Gradle
+.gradle/
+build/
+app/build/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Artefacts (les APK passent par les Releases)
+distribution/*.apk

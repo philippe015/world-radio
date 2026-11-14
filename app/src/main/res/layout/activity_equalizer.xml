@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1220">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eq_title"
+            android:textColor="#E2E8F0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <Button
+                android:id="@+id/btnFlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flat"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnBass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bass"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnVocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vocal"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnRock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rock"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/eqInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#64748B"
+            android:textSize="12sp"
+            android:paddingTop="12dp" />
+    </LinearLayout>
+</ScrollView>

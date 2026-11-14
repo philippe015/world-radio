@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <fr.cyberpunk.worldradio.TronBackgroundView
+        android:id="@+id/tronBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.30" />
+
+    <fr.cyberpunk.worldradio.NeonPanel
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="10dp">
+
+        <!-- barre de titre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/tron_titlebar"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WORLD RADIO — PLAYLIST"
+                android:textColor="#B8F7FF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06" />
+
+            <View
+                android:id="@+id/liveDot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/live_dot" />
+        </LinearLayout>
+
+        <!-- zone LCD : recherche + filtres + état -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical"
+            android:background="@drawable/tron_lcd"
+            android:padding="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FIND:"
+                    android:typeface="monospace"
+                    android:textColor="#00E5FF"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:background="#000000"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:hint="radio, pays, style…"
+                    android:textColor="#B8F7FF"
+                    android:textColorHint="#1B5E20"
+                    android:typeface="monospace"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch" />
+
+                <fr.cyberpunk.worldradio.GlowButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="6dp"
+                                        android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="GO"
+                    android:textColor="#B8F7FF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp">
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/spStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textSize="11sp"
+                android:textColor="#00B8D4"
+                android:paddingTop="4dp"
+                android:text="Chargement…" />
+        </LinearLayout>
+
+        <!-- playlist -->
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:background="#000000"
+            android:divider="#00596B"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/tron_selector"
+            android:cacheColorHint="#000000" />
+
+        <!-- commandes en bas, grosses, à portée de pouce -->
+        <LinearLayout
+            android:id="@+id/miniPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/tron_lcd"
+            android:padding="5dp"
+            android:layout_marginTop="3dp">
+
+            <fr.cyberpunk.worldradio.VisualizerView
+                android:id="@+id/miniViz"
+                android:layout_width="56dp"
+                android:layout_height="34dp" />
+
+            <TextView
+                android:id="@+id/miniName"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:typeface="monospace"
+                android:textColor="#EAFEFF"
+                android:shadowColor="#9900E5FF"
+                android:shadowRadius="8"
+                android:textSize="13sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Aucune station" />
+
+            <fr.cyberpunk.worldradio.GlowImageButton
+                android:id="@+id/btnMiniPlay"
+                android:layout_width="64dp"
+                android:layout_height="52dp"
+                                android:src="@drawable/ic_play"
+                android:tint="#0A2E0F"
+                android:padding="14dp"
+                android:contentDescription="@string/app_name" />
+
+            <fr.cyberpunk.worldradio.GlowImageButton
+                android:id="@+id/btnMiniStop"
+                android:layout_width="64dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_stop"
+                android:tint="#00E5FF"
+                android:padding="16dp"
+                android:contentDescription="@string/stop" />
+
+            <fr.cyberpunk.worldradio.GlowButton
+                android:id="@+id/btnMiniEq"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="EQ"
+                android:textColor="#EAFEFF"
+                android:shadowColor="#9900E5FF"
+                android:shadowRadius="8"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </fr.cyberpunk.worldradio.NeonPanel>
+</FrameLayout>
